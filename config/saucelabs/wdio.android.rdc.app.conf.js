@@ -19,10 +19,10 @@ config.capabilities = [
         // The reference to the app
         testobject_app_id: '4',
         // The api key that has a reference to the app-project in the TO cloud
-        // testobject_api_key: process.env.SAUCE_RDC_EU_ACCESS_KEY_ANDROID_WDIO,
-        testobject_api_key: '48f7ce86-de1d-4f7f-b8f9-a2586ac65014',
+        testobject_api_key: process.env.SAUCE_RDC_ACCESS_KEY,
+        // testobject_api_key: '48f7ce86-de1d-4f7f-b8f9-a2586ac65014',
         // The name of the test for in the cloud
-        testobject_test_name: 'wdio-demo-app-test',
+        testobject_test_name: 'com.lawnstarter.pros',
         // Some default settings
         // You can find more info in the TO Appium Basic Setup section
         platformName: 'Android',

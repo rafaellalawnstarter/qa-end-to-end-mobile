@@ -4,15 +4,8 @@ exports.config = {
     // Configuration
     // ====================
     runner: 'local',
-    framework: 'jasmine',
-    jasmineNodeOpts: {
-        // Updated the timeout to 30 seconds due to possible longer appium calls
-        // When using XPATH
-        defaultTimeoutInterval: 90000,
-        helpers: [require.resolve('@babel/register')],
-    },
     sync: true,
-    logLevel: 'silent',
+    logLevel: 'debug',
     deprecationWarnings: true,
     bail: 0,
     baseUrl: 'http://the-internet.herokuapp.com',
@@ -43,8 +36,8 @@ exports.config = {
                 command: 'appium',
             },
             'sauce', {
-                user: 'rafaella',
-                key: '48f7ce86-de1d-4f7f-b8f9-a2586ac65014',
+                user: process.env.SAUCE_USERNAME,
+                key: process.env.SAUCE_ACCESS_KEY,
                 sauceConnect: true,
                 sauceConnectOpts: {
                     
