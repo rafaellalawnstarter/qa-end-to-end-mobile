@@ -21,7 +21,7 @@ exports.config = {
     connectionRetryCount: 3,
     reporters: ['spec'],
     specs: [
-        './test/specs/**/*.js'
+        './test/specs/*.js'
     ],
 
     // ====================
