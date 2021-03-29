@@ -14,12 +14,13 @@ config.specs = [
 // http://appium.io/docs/en/writing-running-appium/caps/#general-capabilities
 config.capabilities = [
     {
-        deviceName: 'Samsung Galaxy S[8912].*',
+        deviceName: 'Samsung_Galaxy_S10_Plus_real',
         automationName: 'UiAutomator2',
         // The reference to the app
         testobject_app_id: '4',
         // The api key that has a reference to the app-project in the TO cloud
-        testobject_api_key: process.env.SAUCE_RDC_EU_ACCESS_KEY_ANDROID_WDIO,
+        // testobject_api_key: process.env.SAUCE_RDC_EU_ACCESS_KEY_ANDROID_WDIO,
+        testobject_api_key: '48f7ce86-de1d-4f7f-b8f9-a2586ac65014',
         // The name of the test for in the cloud
         testobject_test_name: 'wdio-demo-app-test',
         // Some default settings

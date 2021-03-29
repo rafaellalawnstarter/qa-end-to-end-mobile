@@ -1,31 +1,35 @@
 import TabBar from '../screenobjects/components/tab.bar';
 import LoginScreen from '../screenobjects/login.screen';
+import LoginScreen from '../screenobjects/pro.login.screen';
 
-describe('WebdriverIO and Appium, when interacting with a login form,', () => {
+describe('Provider can login to PROS App', () => {
     beforeEach(() => {
-        TabBar.waitForTabBarShown(true);
-        TabBar.openLogin();
-        LoginScreen.waitForIsShown(true);
+        // TabBar.waitForTabBarShown(true);
+        // TabBar.openLogin();
+        // LoginScreen.waitForIsShown(true);
     });
 
     it('should be able login successfully', () => {
-        LoginScreen.loginContainerButon.click();
-        LoginScreen.email.setValue('test@webdriver.io');
-        LoginScreen.password.setValue('Test1234!');
-
+        ProLoginScreen.landingPageSignInButon.click();
+        ProLoginScreen.email.setValue('61@ls.com');
+        ProLoginScreen.password.setValue('mow814');
         if (driver.isKeyboardShown()) {
             driver.hideKeyboard();
         }
-        LoginScreen.loginButton.click();
-        LoginScreen.alert.waitForIsShown();
-        expect(LoginScreen.alert.text()).toEqual('Success\nYou are logged in!');
+        ProLoginScreen.signInButton.click();
 
-        LoginScreen.alert.pressButton('OK');
-        LoginScreen.alert.waitForIsShown(false);
+        // LoginScreen.loginContainerButon.click();
+        // LoginScreen.email.setValue('test@webdriver.io');
+        // LoginScreen.password.setValue('Test1234!');
+        // LoginScreen.loginButton.click();
+        // LoginScreen.alert.waitForIsShown();
+        // expect(LoginScreen.alert.text()).toEqual('Success\nYou are logged in!');
+
+        // LoginScreen.alert.pressButton('OK');
+        // LoginScreen.alert.waitForIsShown(false);
     });
 
-    // Try to implement this yourself
-    xit('should be able sign up successfully', () => {
+    // xit('should be able sign up successfully', () => {
 
-    });
+    // });
 });

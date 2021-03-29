@@ -39,6 +39,7 @@ exports.config = {
                 },
                 command: 'appium',
             },
+            'sauce',
         ],
     ],
     port: 4723,
