@@ -4,7 +4,7 @@ const { config } = require('../wdio.shared.conf');
 // Specs
 // ============
 config.specs = [
-    './tests/specs/**/app*.spec.js',
+    // './tests/specs/**/app.*.spec.js',
 ];
 
 // ============
@@ -45,7 +45,7 @@ config.capabilities = [
 // - automatically default to the US RDC cloud
 config.services = ['sauce'];
 // If you need to connect to the US RDC cloud comment the below line of code
-config.region = 'eu';
+config.region = 'us';
 // and uncomment the below line of code
 // config.region = 'us';
 // Increase for real device support

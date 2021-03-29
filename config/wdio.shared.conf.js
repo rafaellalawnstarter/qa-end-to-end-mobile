@@ -20,9 +20,12 @@ exports.config = {
     connectionRetryTimeout: 90000,
     connectionRetryCount: 3,
     reporters: ['spec'],
+    specs: [
+        './test/specs/**/*.js'
+    ],
 
     // ====================
-    // Appium Configuration
+    // Appium Conf iguration
     // ====================
     services: [
         [
@@ -39,7 +42,14 @@ exports.config = {
                 },
                 command: 'appium',
             },
-            'sauce',
+            'sauce', {
+                user: 'rafaella',
+                key: '48f7ce86-de1d-4f7f-b8f9-a2586ac65014',
+                sauceConnect: true,
+                sauceConnectOpts: {
+                    
+                }
+            }
         ],
     ],
     port: 4723,
